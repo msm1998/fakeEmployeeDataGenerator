@@ -5,10 +5,6 @@ import json
 def generateName(f):
 	k = [line.strip() for line in f]
 	return k
-	# print(k)
-	# k = f.readlines()[random.randint(0,30000)]
-	# print(k)
-	# return k
 
 def generateSurname(f):
 	k = [line.strip() for line in f]
@@ -47,20 +43,7 @@ if __name__ == '__main__':
 				"salary":random.randint(500000,2000000)
 			}
 			jsonData=json.dumps(s)
-			# print(n,"generating data.....",s)
 			f.write(jsonData)
 			f.write("\n")
 			n-=1
 		print(k," number of data generated in "+str(time.time()-start) +" second")
-
-
-
-
-# l = []
-# with open('emails.txt','r+') as f:
-# 	k = f.readlines()[random.randint(0,212881)]
-# 	print(k)
-	# with open('surname.txt','w+') as w:
-	# 	for i in k:
-	# 		w.write(i)
-	# 		w.write("\n")
